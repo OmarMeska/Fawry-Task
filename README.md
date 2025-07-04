@@ -31,7 +31,6 @@ This application covers the following core features from the challenge:
 ## 📦 Project Structure
 
 - `src/` – Source code
-- `test/` – Unit test files (if any)
 - `build.xml` – Apache Ant build script
 - `nbproject/` – NetBeans project configuration
 
