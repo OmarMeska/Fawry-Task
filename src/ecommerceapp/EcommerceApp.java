@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ecommerceapp;
 
-/**
- *
- * @author omarm
- */
+import java.time.LocalDate;
+import java.time.Month;
+
+
 public class EcommerceApp {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+   
+        
+        Product TV = new ShippableProduct ("TV" , 1000.0 , 5 , false ,null ,500) ;
+        
+        Product cheese = new Product("Cheese" ,15.5  , 5,true,LocalDate.of(2025, Month.MARCH, 5)) ;
+      
+        Product scratchCard = new Product("Scratch Card" ,10.0,5 ,false ,null) ;
+        
+        Customer Omar = new Customer ("Omar",5000);
+        
+        ShippingService shippingService = new ShippingService(.05) ;
+        
+        Omar.addToCart(cheese, 1);
+        Omar.addToCart(TV, 3);
+        Omar.addToCart(scratchCard, 5);
+        
+        Omar.checkout(shippingService);
     
+    }
+       
 }
